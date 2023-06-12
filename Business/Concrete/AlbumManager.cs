@@ -59,39 +59,6 @@ namespace Business.Concrete
             return new SuccessDataResult<bool>(true, Messages.AlbumAdded);
         }
 
-    //    public async Task<IDataResult<bool>> AddAlbumApi(AlbumAddDto album)
-    //    {
-    //        var client = new HttpClient();
-    //        var request = new HttpRequestMessage
-    //        {
-    //            Method = HttpMethod.Get,
-    //            RequestUri = new Uri("https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv"),
-    //            Headers =
-    //{
-    //    { "X-RapidAPI-Key", "faca147f47msh99165d3d80ca732p15a9c8jsn92c7d347795d" },
-    //    { "X-RapidAPI-Host", "spotify23.p.rapidapi.com" },
-    //},
-    //        };
-    //        using (var response = await client.SendAsync(request))
-    //        {
-    //            response.EnsureSuccessStatusCode();
-    //            var body = await response.Content.ReadAsStringAsync();
-    //            AlbumAddDto data = JsonConvert.DeserializeObject<AlbumAddDto>(body);
-    //            Console.WriteLine(body);
-    //        }
-
-
-    //        var addedAlbum = new Album
-    //        {
-    //            Name = album.Name,
-    //            Status = album.Status,
-    //            CreatedDate = album.CreatedDate,
-    //            ModifiedDate = album.ModifiedDate,
-    //        };
-    //        _albumDal.Add(addedAlbum);
-    //        return new SuccessDataResult<bool>(true, Messages.AlbumAdded);
-    //    }
-
         //public IDataResult<bool> Delete(int albumId)
         //{
         //    var deletedAlbum = _albumDal.Get(x => x.Id == albumId);
@@ -117,36 +84,6 @@ namespace Business.Concrete
             }
             return new SuccessDataResult<List<AlbumListDto>>(albumList, Messages.AlbumList);
         }
-
-    //    public async Task<IDataResult<AlbumListApiDto.Root>> GetListApi()
-    //    {
-    //        AlbumListApiDto.Root albumListDtos = new AlbumListApiDto.Root();
-    //        var client = new HttpClient();
-    //        var request = new HttpRequestMessage
-    //        {
-    //            Method = HttpMethod.Get,
-    //            RequestUri = new Uri("https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv"),
-    //            Headers =
-    //{
-    //    { "X-RapidAPI-Key", "faca147f47msh99165d3d80ca732p15a9c8jsn92c7d347795d" },
-    //    { "X-RapidAPI-Host", "spotify23.p.rapidapi.com" },
-    //},
-    //        };
-    //        using (var response = await client.SendAsync(request))
-    //        {
-    //            response.EnsureSuccessStatusCode();
-    //            var body = await response.Content.ReadAsStringAsync();
-    //            if (body != null)
-    //            {
-    //                AlbumListApiDto.Root data = JsonConvert.DeserializeObject<AlbumListApiDto.Root>(body);
-    //                //Console.WriteLine(data);
-    //                albumListDtos = data;
-    //            }
-    //            //Console.WriteLine(body);
-    //            return new SuccessDataResult<AlbumListApiDto.Root>(albumListDtos, Messages.AlbumList);
-    //        }
-
-    //    }
 
         public IDataResult<bool> Update(AlbumUpdateDto album)
         {
